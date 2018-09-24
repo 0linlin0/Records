@@ -15,7 +15,6 @@
 
 Msf端设置监听端口，等待回连，访问链接，回连成功
 
-
 ![](https://github.com/0linlin0/Records/blob/master/images/jb4.png)
 
 Yes！拿到了webshell，我就想拿meterpreter，首先得上传payload，所以我又去搜，windows命令行下怎么样下载远程文件，得到了好多结果
