@@ -17,4 +17,5 @@
 所以这里就引出了css当中 css当中很多都类似于这样的
 <style> body { background:url('javascript:alert(1))')}</style>
 和上面一样 也不行 所以说css 并没有什么卵用(可能是我太菜了，，，)
+
 ```
