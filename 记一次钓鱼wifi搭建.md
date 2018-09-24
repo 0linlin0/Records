@@ -1,6 +1,6 @@
 # 钓鱼wifi创建过程
 
-其实只要有一个可以置入minitor模式的无线网卡就可以 并不需要两个，首先先设置自己的web服务器 这里我选用了kail自带的apache
+只要有一个可以置入minitor模式的无线网卡就可以并不需要两个，首先先设置自己的web服务器 这里我选用了kail自带的apache
 
 配置apache 其默认的web目录在 /var/www/html 下 修改index.html内容为
 ```php
