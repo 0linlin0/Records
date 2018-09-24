@@ -2,7 +2,9 @@
 人家还给了一个简单的UIshell界面 不过，好难用的说这个后面再说
 这个漏洞就是JBoss的默认身份验证漏洞，都不用登录的说，直接去网上扫就好了
 那么问题来了，原作者写的一句话jsp的后门菜刀连不上，蚁剑不支持jsp，这就尴尬了，不过还好人家代码挺少，只能乖乖修改源码去了。
+
 ![](https://github.com/0linlin0/Records/blob/master/images/jb1.png?raw=true)
+
 原作者调用了zoomeye的api，然后构造exp，发送get请求，并验证在这里我们可以修改exp，我们强大的msf可以生成payload，用的是 payload/java/jsp_shell_reverse_tcp ，生成的代码不太多，因为漏洞利用的时候需要将代码url编码后放到get请求里，所以这里就悲催了，尽量压缩代码把。msf心比它提供的UIshell界面好用多了。谁让我java很烂呢:(
 生成payload并进行url编码，修改exp，然后运行修改后的脚本
 
