@@ -1,3 +1,5 @@
+![](https://github.com/0linlin0/Records/blob/master/images/ct1.png)
+
 最近队里面新增了一批设备，队长说能不能在ctf线下赛的时候带树莓派过去，把内网转发出来，这个想法非常好噻，他认为我是学网工的，就把这个光荣的任务交给了我（手动滑稽，，，，，）
 
 需要的设备，一个流量很多的手机用来开热点，一个具有无限网卡的树莓派
@@ -13,9 +15,6 @@ net.ipv4.ip_forward=1注释去掉
 sysctl –p
 
 2.利用iptables进行防火墙配置，启用NAT
-
- 
-![](https://github.com/0linlin0/Records/blob/master/images/ct1.png)
 
 嗯，，iptables真是一个好东西，需要深入学习，，这话已经第n便说了上图
 
